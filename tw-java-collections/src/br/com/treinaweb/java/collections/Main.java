@@ -15,11 +15,11 @@ public class Main {
 		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
 		// N1 --> N2 ---> N3
 		
-		System.out.println("Com FOR: ");
-		for (int i = 0; i < pessoas.size(); i++) {
-			Pessoa p = pessoas.get(i);
-			System.out.println(p);
-		}
+//		System.out.println("Com FOR: ");
+//		for (int i = 0; i < pessoas.size(); i++) {
+//			Pessoa p = pessoas.get(i);
+//			System.out.println(p);
+//		}
 		
 		System.out.println("Com iterator: ");
 		//       |                   
@@ -27,14 +27,18 @@ public class Main {
 		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
 		while (iteratorPessoa.hasNext()) {
 			Pessoa p = iteratorPessoa.next();
+			if (p.getId() == 1) {
+//				pessoas.remove(p);
+				iteratorPessoa.remove();
+			}
 			System.out.println(p);
 		}
 				
 		// For-each
-		System.out.println("Com For-each:");
-		for (Pessoa p : pessoas) {
-			System.out.println(p);
-		}
+//		System.out.println("Com For-each:");
+//		for (Pessoa p : pessoas) {
+//			System.out.println(p);
+//		}
 		
 		System.out.println("FIM!");
 	}
