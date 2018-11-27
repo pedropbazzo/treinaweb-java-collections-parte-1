@@ -12,7 +12,6 @@ public class Main {
 		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
 		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
 		System.out.println(pessoas.toString());
-
 	}
 
 }
