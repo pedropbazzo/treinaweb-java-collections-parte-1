@@ -13,7 +13,13 @@ public class Main {
 		List<Pessoa> pessoas = new LinkedList<Pessoa>();
 		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
 		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
-		pessoas.add(new Pessoa(2, "TreinaWeb 3"));		
+		pessoas.add(new Pessoa(2, "TreinaWeb 3"));	
+		
+		pessoas.remove(new Pessoa(1, "TreinaWeb 1"));
+		
+		System.out.println(pessoas.contains(new Pessoa(2, "TreinaWeb 2")));
+		
+		System.out.println(pessoas);
 		// N1 --> N2 ---> N3
 		
 //		System.out.println("Com FOR: ");
