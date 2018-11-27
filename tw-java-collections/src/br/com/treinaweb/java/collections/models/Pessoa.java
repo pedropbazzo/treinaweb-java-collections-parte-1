@@ -1,6 +1,6 @@
 package br.com.treinaweb.java.collections.models;
 
-public class Pessoa implements Comparable<Pessoa>{
+public class Pessoa implements Comparable<Pessoa> {
 
 	private int id;
 	private String nome;
@@ -62,7 +62,7 @@ public class Pessoa implements Comparable<Pessoa>{
 
 	@Override
 	public int compareTo(Pessoa o) {
-		// 0: os objetos são considerados iguais
+		// 0: os objetos são considerados "iguais"
 		if (this.getId() == o.getId()) {
 			return 0;
 		}

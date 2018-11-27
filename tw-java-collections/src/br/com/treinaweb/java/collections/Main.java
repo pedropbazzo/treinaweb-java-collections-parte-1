@@ -2,13 +2,14 @@ package br.com.treinaweb.java.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-import br.com.treinaweb.java.collections.comparadores.PessoaTamanhoNomeComparator;
 import br.com.treinaweb.java.collections.models.Pessoa;
+import br.com.treinaweb.java.collections.comparadores.PessoaTamanhoNomeComparator;
 
 public class Main {
 
@@ -20,13 +21,29 @@ public class Main {
 		System.out.println("Antes da ordenação: ");
 		System.out.println(pessoas);
 //		Collections.sort(pessoas, new PessoaTamanhoNomeComparator());
-		Collections.sort(pessoas);
+//		Collections.sort(pessoas, (Comparator<Pessoa>)(o1, o2) -> {
+//			if (o1.getNome().length() == o2.getNome().length()) {
+//				return 0;
+//			} else if (o1.getNome().length() < o2.getNome().length()) {
+//				return -1;
+//			}
+//			return 1;
+//		});
+		pessoas.sort((o1, o2) -> {
+			if (o1.getNome().length() == o2.getNome().length()) {
+				return 0;
+			} else if (o1.getNome().length() < o2.getNome().length()) {
+				return -1;
+			}
+			return 1;
+		});		
+//		Collections.sort(pessoas);
 		System.out.println("Depois da ordenação: ");
 		System.out.println(pessoas);
-		
+//		
 //		pessoas.remove(new Pessoa(1, "TreinaWeb 1"));
 //		
-//		System.out.println(pessoas.contains(new Pessoa(2, "TreinaWeb 2")));	
+//		System.out.println(pessoas.contains(new Pessoa(2, "TreinaWeb 2")));
 		// N1 --> N2 ---> N3
 		
 //		System.out.println("Com FOR: ");

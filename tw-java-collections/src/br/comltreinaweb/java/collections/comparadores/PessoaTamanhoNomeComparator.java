@@ -1,10 +1,10 @@
-package br.com.treinaweb.java.collections.comparadores;
+package br.comltreinaweb.java.collections.comparadores;
 
 import java.util.Comparator;
 
 import br.com.treinaweb.java.collections.models.Pessoa;
 
-public class PessoaTamanhoNomeComparator implements Comparator<Pessoa> {
+public class PessoaTamanhoNomeComparator implements Comparator<Pessoa>{
 
 	@Override
 	public int compare(Pessoa o1, Pessoa o2) {
