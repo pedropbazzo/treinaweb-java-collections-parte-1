@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
+import br.com.treinaweb.java.collections.comparadores.PessoaTamanhoNomeComparator;
 import br.com.treinaweb.java.collections.models.Pessoa;
 
 public class Main {
@@ -14,10 +15,11 @@ public class Main {
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		pessoas.add(new Pessoa(3, "TreinaWeb 3"));
-		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
-		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
+		pessoas.add(new Pessoa(1, "TreinaWe 1"));
+		pessoas.add(new Pessoa(2, "Treina 2"));
 		System.out.println("Antes da ordenação: ");
 		System.out.println(pessoas);
+//		Collections.sort(pessoas, new PessoaTamanhoNomeComparator());
 		Collections.sort(pessoas);
 		System.out.println("Depois da ordenação: ");
 		System.out.println(pessoas);
