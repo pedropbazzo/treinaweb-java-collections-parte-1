@@ -25,15 +25,17 @@ public class Main {
 		System.out.println("Com iterator: ");
 		//       |                   
 		// [p1, p2]
-		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
-		while (iteratorPessoa.hasNext()) {
-			Pessoa p = iteratorPessoa.next();
-			if (p.getId() == 1) {
-//				pessoas.remove(p);
-				iteratorPessoa.remove();
-			}
-			System.out.println(p);
-		}
+//		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
+//		while (iteratorPessoa.hasNext()) {
+//			Pessoa p = iteratorPessoa.next();
+//			if (p.getId() == 1) {
+////				pessoas.remove(p);
+//				iteratorPessoa.remove();
+//			}
+//			System.out.println(p);
+//		}
+		pessoas.removeIf(p -> p.getId() == 1);
+		System.out.println(pessoas);
 				
 		// For-each
 //		System.out.println("Com For-each:");
