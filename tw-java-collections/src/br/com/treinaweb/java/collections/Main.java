@@ -1,6 +1,7 @@
 package br.com.treinaweb.java.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,15 +13,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		pessoas.add(new Pessoa(3, "TreinaWeb 3"));
 		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
 		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
-		pessoas.add(new Pessoa(2, "TreinaWeb 3"));
-		
-		pessoas.remove(new Pessoa(1, "TreinaWeb 1"));
-		
-		System.out.println(pessoas.contains(new Pessoa(2, "TreinaWeb 2")));
-		
+		System.out.println("Antes da ordenação: ");
 		System.out.println(pessoas);
+		Collections.sort(pessoas);
+		System.out.println("Depois da ordenação: ");
+		System.out.println(pessoas);
+		
+//		pessoas.remove(new Pessoa(1, "TreinaWeb 1"));
+//		
+//		System.out.println(pessoas.contains(new Pessoa(2, "TreinaWeb 2")));	
 		// N1 --> N2 ---> N3
 		
 //		System.out.println("Com FOR: ");
