@@ -14,7 +14,7 @@ import br.comltreinaweb.java.collections.comparadores.PessoaTamanhoNomeComparato
 public class Main {
 
 	public static void main(String[] args) {
-		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		List<Pessoa> pessoas = new LinkedList<Pessoa>();
 		pessoas.add(new Pessoa(3, "TreinaWeb 3"));
 		pessoas.add(new Pessoa(1, "TreinaWe 1"));
 		pessoas.add(new Pessoa(2, "Treina 2"));
@@ -36,19 +36,19 @@ public class Main {
 //				return -1;
 //			}
 //			return 1;
-//		});		
+//		});
 //		pessoas.sort(Comparator.comparingInt(Pessoa::getId));
 //		pessoas.sort(Comparator.comparing(Pessoa::getNome, (o1, o2) -> {
 //			if (o1.length() == o2.length()) {
-//				return 0;
-//			}
-//			if (o1.length() < o2.length()) {
+//			return 0;
+//			} else if (o1.length() < o2.length()) {
 //				return -1;
 //			}
-//			return 1;
+//			return 1;			
 //		}));
 //		pessoas.sort(Comparator.naturalOrder());
-		pessoas.sort(Comparator.reverseOrder());		
+		pessoas.sort(Comparator.reverseOrder());
+//		Collections.sort(pessoas);
 		System.out.println("Depois da ordenação: ");
 		System.out.println(pessoas);
 //		
