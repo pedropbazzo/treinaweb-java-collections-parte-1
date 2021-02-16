@@ -29,3 +29,5 @@ Repositório com o código produzido durante o curso "Java - Collection API - pa
 | 17ab970ecceddde167f8ce68b5c4e6c456e2c47c | Aula 5.3: Conhecendo o TreeSet |
 | bc4d84af237034241e4fffce01e6c6fe05c40e4c | Aula 6.1: Conhecendo a PriorityQueue |
 | a9842fceedbd385b715ad4949aaae52dd3fa2ed5 | Aula 6.2: Queues e os métodos peek() e poll() |
+
+// read
